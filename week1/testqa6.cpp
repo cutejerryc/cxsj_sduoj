@@ -1,19 +1,35 @@
-  #include<iostream>
-  #include<string>
-  #include<stdio.h>
-  using namespace std;
-  int main(){
-    string s;
-    /*读取文件*/
-    FILE*fp=freopen("in.txt","r",stdin);//将输入流重定向到文件in.txt
+#include <iostream>
+#include <stdio.h>
+#include<fstream>
+using namespace std;
+void fre_open(){
+     string s;
+    // 重定向输入流
+    freopen("in.txt", "r", stdin);
     cin>>s;
-    cout<<s<<endl;
-    // 将输入流重定向到键盘输入
-    fflush(fp);
-    freopen("/dev/tty","r",stdin);
-    /*写入文件*/
-    cin>>s;
-    //将输出流重定向到out.txt文件
-    freopen("out.txt","w",stdout);
-    cout<<s;
-  }
+    cout<<"in.txt cin->"<<s;
+    // 重定向输出流
+    freopen("out.txt", "w", stdout);
+    cout<<"out.txt cout";
+}
+void io_fstream(){
+  //重定向输入
+  ifstream in("in.txt");
+  streambuf *inbuf=cin.rdbuf();
+  cin.rdbuf(in.rdbuf());//输入的缓冲区设置为in的
+  string s;
+  std::cin>>s;
+  cout<<s;
+  cin.rdbuf(inbuf);//恢复
+  //重定向输出
+  ofstream out("out.txt");
+  streambuf *outbuf=cout.rdbuf();
+  cout.rdbuf(out.rdbuf());
+  cin>>s;
+  cout<<s;
+
+}
+int main() {
+  io_fstream();
+  return 0;
+}

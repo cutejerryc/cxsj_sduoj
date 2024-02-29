@@ -80,25 +80,24 @@ $$
 - 输出格式有细微差别
 
 ## 6
-### 使用C++ freopen()函数实现重定向
-- 文件输入
-  ```cpp
-  #include<iostream>
-  #include<string>
-  #include<stdio.h>
-  using namespace std;
-  int main(){
-    string s;
-    /*读取文件*/
-    freopen("in.txt","r",stdin);//将输入流重定向到文件in.txt
+- 利用fopen
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int main() {
+   string s;
+    // 重定向输入流
+    freopen("in.txt", "r", stdin);
     cin>>s;
-    cout<<s<<endl;
-    // 将输入流重定向到键盘输入
-    freopen("/dev/tty", "r", stdin);
-    /*写入文件*/
-    cin>>s;
-    //将输出流重定向到out.txt文件
-    freopen("out.txt","w",stdout);
-    cout<<s;
-  }
-  ```
+    cout<<"in.txt cin->"<<s;
+    // 重定向输出流
+    freopen("out.txt", "w", stdout);
+    cout<<"out.txt cout";
+    return 0;
+}
+```
+- 利用ifstream ofstream
+```cpp
+
+```

@@ -6,5 +6,5 @@ int main(){
     cin>>a>>b;
     double c=b-a;
     double re=std::abs(100*c/a);
-    cout<<std::fixed<<std::setprecision(3)<<re;
+    cout<<std::fixed<<setprecision(2)<<re;
 }
