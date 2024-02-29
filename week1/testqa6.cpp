@@ -27,7 +27,6 @@ void io_fstream(){
   cout.rdbuf(out.rdbuf());
   cin>>s;
   cout<<s;
-
 }
 int main() {
   io_fstream();
