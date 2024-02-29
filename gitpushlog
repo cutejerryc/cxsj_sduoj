@@ -1,0 +1,136 @@
+Initialized empty Git repository in /home/wangxv/Files/cxsj_sduoj/.git/
+[master (root-commit) 6062d38] new pthiroject
+ 38 files changed, 443 insertions(+)
+ create mode 100644 gitpushlog
+ create mode 100644 week1/.vscode/tasks.json
+ create mode 100755 week1/10
+ create mode 100644 week1/10.cpp
+ create mode 100755 week1/11
+ create mode 100644 week1/11.cpp
+ create mode 100755 week1/12
+ create mode 100644 week1/12.cpp
+ create mode 100755 week1/13
+ create mode 100644 week1/13.cpp
+ create mode 100644 week1/14.cpp
+ create mode 100755 week1/15
+ create mode 100644 week1/15.cpp
+ create mode 100755 week1/16
+ create mode 100644 week1/16.cpp
+ create mode 100755 week1/4
+ create mode 100644 week1/4.cpp
+ create mode 100755 week1/5
+ create mode 100644 week1/5.cpp
+ create mode 100755 week1/6
+ create mode 100644 week1/6.cpp
+ create mode 100755 week1/7
+ create mode 100644 week1/7.cpp
+ create mode 100755 week1/8
+ create mode 100644 week1/8.cpp
+ create mode 100755 week1/9
+ create mode 100644 week1/9.cpp
+ create mode 100755 week1/Orthogonality
+ create mode 100644 week1/Orthogonality.cpp
+ create mode 100755 week1/discount
+ create mode 100644 week1/discount.cpp
+ create mode 100644 week1/in.txt
+ create mode 100644 week1/out.txt
+ create mode 100644 week1/qa.md
+ create mode 100755 week1/slot
+ create mode 100644 week1/slot.cpp
+ create mode 100755 week1/testqa6
+ create mode 100644 week1/testqa6.cpp
+{
+  "message": "Requires authentication",
+  "documentation_url": "https://docs.github.com/rest/repos/repos#create-a-repository-for-the-authenticated-user"
+}
+Initialized empty Git repository in /home/wangxv/Files/cxsj_sduoj/.git/
+[master (root-commit) 12e2d0a] new pthiroject
+ 38 files changed, 488 insertions(+)
+ create mode 100644 gitpushlog
+ create mode 100644 week1/.vscode/tasks.json
+ create mode 100755 week1/10
+ create mode 100644 week1/10.cpp
+ create mode 100755 week1/11
+ create mode 100644 week1/11.cpp
+ create mode 100755 week1/12
+ create mode 100644 week1/12.cpp
+ create mode 100755 week1/13
+ create mode 100644 week1/13.cpp
+ create mode 100644 week1/14.cpp
+ create mode 100755 week1/15
+ create mode 100644 week1/15.cpp
+ create mode 100755 week1/16
+ create mode 100644 week1/16.cpp
+ create mode 100755 week1/4
+ create mode 100644 week1/4.cpp
+ create mode 100755 week1/5
+ create mode 100644 week1/5.cpp
+ create mode 100755 week1/6
+ create mode 100644 week1/6.cpp
+ create mode 100755 week1/7
+ create mode 100644 week1/7.cpp
+ create mode 100755 week1/8
+ create mode 100644 week1/8.cpp
+ create mode 100755 week1/9
+ create mode 100644 week1/9.cpp
+ create mode 100755 week1/Orthogonality
+ create mode 100644 week1/Orthogonality.cpp
+ create mode 100755 week1/discount
+ create mode 100644 week1/discount.cpp
+ create mode 100644 week1/in.txt
+ create mode 100644 week1/out.txt
+ create mode 100644 week1/qa.md
+ create mode 100755 week1/slot
+ create mode 100644 week1/slot.cpp
+ create mode 100755 week1/testqa6
+ create mode 100644 week1/testqa6.cpp
+{
+  "message": "Requires authentication",
+  "documentation_url": "https://docs.github.com/rest/repos/repos#create-a-repository-for-the-authenticated-user"
+}
+Initialized empty Git repository in /home/wangxv/Files/cxsj_sduoj/.git/
+[master (root-commit) c8aca70] new pthiroject
+ 39 files changed, 534 insertions(+)
+ create mode 100644 gitpushlog
+ create mode 160000 shell
+ create mode 100644 week1/.vscode/tasks.json
+ create mode 100755 week1/10
+ create mode 100644 week1/10.cpp
+ create mode 100755 week1/11
+ create mode 100644 week1/11.cpp
+ create mode 100755 week1/12
+ create mode 100644 week1/12.cpp
+ create mode 100755 week1/13
+ create mode 100644 week1/13.cpp
+ create mode 100644 week1/14.cpp
+ create mode 100755 week1/15
+ create mode 100644 week1/15.cpp
+ create mode 100755 week1/16
+ create mode 100644 week1/16.cpp
+ create mode 100755 week1/4
+ create mode 100644 week1/4.cpp
+ create mode 100755 week1/5
+ create mode 100644 week1/5.cpp
+ create mode 100755 week1/6
+ create mode 100644 week1/6.cpp
+ create mode 100755 week1/7
+ create mode 100644 week1/7.cpp
+ create mode 100755 week1/8
+ create mode 100644 week1/8.cpp
+ create mode 100755 week1/9
+ create mode 100644 week1/9.cpp
+ create mode 100755 week1/Orthogonality
+ create mode 100644 week1/Orthogonality.cpp
+ create mode 100755 week1/discount
+ create mode 100644 week1/discount.cpp
+ create mode 100644 week1/in.txt
+ create mode 100644 week1/out.txt
+ create mode 100644 week1/qa.md
+ create mode 100755 week1/slot
+ create mode 100644 week1/slot.cpp
+ create mode 100755 week1/testqa6
+ create mode 100644 week1/testqa6.cpp
+{
+  "message": "Requires authentication",
+  "documentation_url": "https://docs.github.com/rest/repos/repos#create-a-repository-for-the-authenticated-user"
+}
