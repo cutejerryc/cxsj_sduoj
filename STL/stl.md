@@ -195,3 +195,55 @@ vector<struct SelfDef>array;
 
 5. **size()**：返回栈中元素的个数
    - 时间复杂度：O(1)
+
+## priority_queue
+### 包含头文件
+```cpp
+#include <queue>
+```
+
+### 创建优先队列
+```cpp
+std::priority_queue<int> pq; // 创建一个存储整数的默认最大优先队列
+```
+
+### 插入元素
+```cpp
+pq.push(10); // 向优先队列中插入元素 10
+pq.push(20); // 向优先队列中插入元素 20
+```
+
+### 访问顶部元素
+```cpp
+int topElement = pq.top(); // 获取优先队列中的顶部元素（具有最高优先级）
+```
+
+### 删除顶部元素
+```cpp
+pq.pop(); // 从优先队列中删除顶部元素
+```
+
+### 自定义比较函数
+如果需要自定义元素的比较方式，可以传入自定义的比较函数作为模板参数，或者重载元素类型的 `<` 操作符。
+
+例如，创建一个最小堆（最小值优先）的优先队列：
+```cpp
+std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
+```
+
+或者自定义结构体并重载 `<` 操作符：
+```cpp
+struct Node {
+    int val;
+    int priority;
+    bool operator<(const Node& other) const {
+        return priority > other.priority; // 自定义比较规则
+    }
+};
+
+std::priority_queue<Node> customQueue;
+```
+
+### 注意事项
+- `std::priority_queue` 默认情况下是最大堆（最大值优先），如果需要最小堆，可以传入第三个模板参数为 `std::greater<T>`。
+- 优先队列的元素没有随机访问的能力，只能操作顶部元素和插入/删除操作。
