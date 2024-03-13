@@ -1,44 +1,56 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-class Grid {
-public:
-    int grid_size, target_count, total_count;
-    char grid[9][9];
-    int used_columns[9] = {0};
-
-    Grid(int size, int target): grid_size(size), target_count(target), total_count(0) {}
-
-    void dfs(int placed_count, int row) {
-        if (placed_count > target_count) {
-            total_count++;
-            return;
+int n,k;
+int num;
+void recursion(vector<bool>judge_row,vector<bool>judge_col,vector<pair<int,int>>position_can,int k){
+    while(position_can.size()>=k){
+        k--;
+        if(k==0){
+            num++;
+            k++;
+            position_can.erase(position_can.begin(),position_can.begin()+1);
+            continue;
         }
-        for (int i = row; i <= grid_size - (target_count - placed_count); i++) {
-            for (int j = 1; j <= grid_size; j++) {
-                if (!used_columns[j] && grid[i][j] == '#') {
-                    used_columns[j] = 1;
-                    dfs(placed_count + 1, i + 1);
-                    used_columns[j] = 0;
-                }
+        int x=position_can.begin()->first;
+        int y=position_can.begin()->second;
+        judge_row[x]=false;
+        judge_col[y]=false;
+        position_can.erase(position_can.begin(),position_can.begin()+1);
+        vector<pair<int,int>>re;
+        for(int i=0;i<position_can.size();i++){
+            if(judge_row[position_can[i].first]&&judge_col[position_can[i].second]){
+                re.push_back(position_can[i]);
             }
         }
+        recursion(judge_row,judge_col,re,k);
+        k++;
+        judge_row[x]=true;
+        judge_col[y]=true;
     }
-};
-
-int main() {
-    int grid_size, target_count;
-    while (true) {
-        cin >> grid_size >> target_count;
-        if (grid_size == -1 && target_count == -1) break;
-        Grid qi_pan(grid_size, target_count);
-        for (int i = 0; i < grid_size; i++) {
-            for (int j = 0; j < grid_size; j++) {
-                cin >> qi_pan.grid[i + 1][j + 1];
-            }
+}
+void deal(){
+    vector<bool>judge_row(n+1,true);
+    vector<bool>judge_col(n+1,true);
+    vector<pair<int,int>>position_can;
+    char c;
+    for(int i=0;i<n;i++){
+        for(int u=0;u<n;u++){
+           cin>>c;
+           if(c=='#'){
+            position_can.push_back(make_pair(i,u));
+           } 
         }
-        qi_pan.dfs(1, 1);
-        cout << qi_pan.total_count << endl;
     }
-    return 0;
+    recursion(judge_row,judge_col,position_can,k);
+}
+int main(){
+    while(1){
+        num=0;
+        cin>>n>>k;
+        if(n==k&&k==-1){
+            break;
+        }
+        deal();
+        cout<<num<<endl;
+    }
 }
