@@ -14,7 +14,7 @@ int main(){
     }
     for(int i=1;i<a.size();i++){
         while(a[i].size()>0){
-            cout<<a[i].top();
+            cout<<a[i].top()<<' ';
             a[i].pop();
         }
         cout<<endl;
