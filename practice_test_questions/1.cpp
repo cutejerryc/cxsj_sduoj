@@ -53,12 +53,12 @@ class CardType{
             //需要选两个一样的出来
             for(int i=0;i<all_cards.size();i++){
                 Card card_f=Card(all_cards[i]);
-                for(int u=0;u<all_cards.size();u++){
+                for(int u=i+1;u<all_cards.size();u++){
                     if(all_cards[u].if_same(card_f)){
                         continue;
                     }
                     Card card_s=Card(all_cards[u]);
-                    for(int j=0;j<all_cards.size();j++){
+                    for(int j=u+1;j<all_cards.size();j++){
                         if(all_cards[j].if_same(card_f)||all_cards[j].if_same(card_s)){
                             continue;
                         }
