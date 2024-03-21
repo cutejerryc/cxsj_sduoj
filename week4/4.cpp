@@ -8,16 +8,13 @@ int main() {
     for (int i = 0; i < n; ++i) {
         cin >> a[i];
     }
-    sort(a.begin(), a.end());
+    sort(a.begin(), a.end());//排序
 
     int operations = 0;
     for (int i = 0; i < n - 1; ++i) {
         int u = i + 1;
-        while (u < n && a[u] - a[i] <= k) {
+        if (u < n && a[u] - a[i] <= k) {//判断是否存在
             ++u;
-            if(u>i+1){
-                break;
-            }
         }
         operations += u - i - 1;
     }
