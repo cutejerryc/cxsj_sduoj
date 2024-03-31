@@ -91,7 +91,7 @@ public:
         return false;
     }
     bool if_ip_repeat(){
-        if(used_ip.find(data)!=used_ip.end()&&used_ip[data]){
+        if(used_ip.find(source_ip)!=used_ip.end()&&used_ip[source_ip]){
             return true;
         }
         return false;
@@ -119,8 +119,8 @@ public:
                 cout<<"Ver23*"+target_ip+source_ip+"103"+ int_to_4string(data.length())+data;
             }
         }else if(type==3){
-            if(!if_refuse_request()&&if_name_ip_matched()){
-                cout<<"Ver23*"+target_ip+"099999999999"+"099"+ int_to_4string(data.length())+ip_name_map[source_ip]+":"+data;
+            if(!if_refuse_request()&&if_ip_repeat()){
+                cout<<"Ver23*022222222222099999999999099"+ int_to_4string(data.length()+ip_name_map[source_ip].length()+1)+ip_name_map[source_ip]+":"+data;
             }
         }else{
 
@@ -164,10 +164,7 @@ public:
     }
     void server_deal(){
         for(int i=0;i<n;i++){
-            cout<<i<<endl;
-            cout<<passages[i].origin_msg<<endl;
             passages[i].deal();
-            cout<<endl<<endl;
         }
     }
 };
