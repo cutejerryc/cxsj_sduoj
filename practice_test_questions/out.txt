@@ -1,0 +1,61 @@
+OpId #1: success.
+OpId #2: success.
+OpId #3: success.
+OpId #4: same likeness.
+OpId #5: success.
+OpId #6: success.
+OpId #7: success.
+OpId #8: success.
+OpId #9: success.
+OpId #10: success.
+OpId #11: success.
+OpId #12: close 4 with 4.
+OpId #13: success.
+OpId #14: success.
+OpId #15: success.
+OpId #16: same likeness.
+OpId #17: success.
+OpId #18: success.
+OpId #19: success.
+OpId #20: success.
+OpId #21: success.
+OpId #22: success.
+OpId #23: success.
+OpId #24: success.
+OpId #25: success.
+OpId #26: success.
+OpId #27: same likeness.
+OpId #28: close 2 with 7.
+OpId #29: success.
+OpId #30: same likeness.
+OpId #31: Bye 3: 26.
+OpId #1: success.
+OpId #2: success.
+OpId #3: success.
+OpId #4: same likeness.
+OpId #5: success.
+OpId #6: success.
+OpId #7: success.
+OpId #8: success.
+OpId #9: success.
+OpId #10: success.
+OpId #11: success.
+OpId #12: close 4 with 4.
+OpId #13: success.
+OpId #14: success.
+OpId #15: success.
+OpId #16: same likeness.
+OpId #17: success.
+OpId #18: success.
+OpId #19: success.
+OpId #20: success.
+OpId #21: success.
+OpId #22: success.
+OpId #23: success.
+OpId #24: success.
+OpId #25: success.
+OpId #26: success.
+OpId #27: same likeness.
+OpId #28: close 2 with 7.
+OpId #29: success.
+OpId #30: Bye 3: 26.
