@@ -30,11 +30,11 @@ def get_class_imgs(id:int):
     
     features_tensor = torch.tensor(features)
     try:
-        existing_features = torch.load('./com_1/SVM/train_img_features.pt')
+        existing_features = torch.load('/home/wx/Files/compete/com_1/SVM/train_img_features.pt')
         updated_features = torch.cat((existing_features, features_tensor), dim=0)
-        torch.save(updated_features, './com_1/SVM/train_img_features.pt')
+        torch.save(updated_features, '/home/wx/Files/compete/com_1/SVM/train_img_features.pt')
     except FileNotFoundError:
-        torch.save(features_tensor, './com_1/SVM/train_img_features.pt')
+        torch.save(features_tensor, '/home/wx/Files/compete/com_1/SVM/train_img_features.pt')
     except Exception as e:
         print("can't find .pt->")
         print(e)
@@ -51,7 +51,7 @@ for i in tqdm([i for i in range(class_nums)]):
         selected_img_labels.append(train_labels[pre_id_sum+u])
     pre_id_sum=pre_id_sum+len([k for k in range(len(train_labels)) if train_labels[k]==i])
 print(selected_imgs[:10])
-with open('./com_1/SVM/selected_class.txt','w') as f:
+with open('/home/wx/Files/compete/com_1/SVM/selected_class.txt','w') as f:
     for i in range(len(selected_imgs)):
         f.write(str(selected_imgs[i])+' '+str(selected_img_labels[i])+'\n')
     f.close()
