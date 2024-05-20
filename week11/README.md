@@ -119,3 +119,98 @@ lzh 在火星开了一家饭店，为了吸引顾客，饭店会不定期在菜�
 ## 数据范围
 
 对于全部数据，1≤m≤2×105,1≤p≤2×109,0≤t<p。
+# 1
+- 不可以，因为树状数组每个节点内存储的元素是一些元素的和，要计算平均值要知道元素个数，而且一个节点内存储的元素和对应的元素一般也不是连续的，如果在节点加上一个属性就是这个节点对应的计算的和的元素个数应该可以
+# 2
+## 解法
+- 首先根据时间进行排序，然后对因使用的内存做处理。
+- 维护一个内存树状数组
+  - 每个索引`ind`对应的元素是内存小于等于ind的程序个数
+- 维护一个分数数组，对应的索引为`ind`的元素为得到此得分的程序个数
+- 因为已经按照时间排序了，所以无需担心会在计算某一个程序时之后的一些程序的情况  
+## 时间复杂度
+$$
+O(n \cdot \log{n})
+$$  
+- 树状数组添加和查询的时间复杂度为  $\log{n}$
+## 代码
+```cpp
+#include<bits/stdc++.h>
+using namespace std; 
+class TreeArray{
+    private:
+    long long int lowbit(const long long int&x){
+        return (x&(-x));
+    }
+    public:
+    vector<long long int>a;
+    long long int n,q;
+    TreeArray(){};
+    TreeArray(const long long int &n_){
+        n=n_;
+        long long int g;
+        a=vector<long long int>(n+1,0);
+    }
+    void add(const long long int&ind,const long long int&k){
+        for(long long int i=ind;i<=1e6+1;i+=lowbit(i)){
+            a[i]+=k;
+        }
+    }
+    long long int search(const long long int&begin,const long long int&end){
+        long long int ans=0;
+        for(long long int i=begin-1;i;i-=lowbit(i)){
+            ans-=a[i];
+        }
+        for(long long int i=end;i;i-=lowbit(i)){
+            ans+=a[i];
+        }
+        return ans;
+    }
+    long long int sum(const long long int&end){
+        long long int ans=0;
+        for(long long int i=end;i;i-=lowbit(i)){
+            ans+=a[i];
+        }
+        return ans;
+    }
+};
+class Program{
+    public:
+    long long int time;
+    long long int mem;
+    Program(){}
+    Program(const int&t,const int&m):time(t),mem(m){}
+    bool operator <(const Program&other){
+        return time<other.time || (time==other.time&&mem<other.mem);
+    }
+};
+class Deal{
+    public:
+    long long int n;
+    TreeArray ta;
+    vector<Program>p;
+    Deal(){
+        cin>>n;
+        ta=TreeArray(1e6+1);
+        int a,b;
+        for(int i=0;i<n;i++){
+            scanf("%d %d",&a,&b);
+            p.push_back(Program(a,b));
+        }
+        sort(p.begin(),p.end());
+    }
+    void solve(){
+        vector<long long int>ans(1e6+1,0);
+        for(int i=0;i<n;i++){
+            ta.add(p[i].mem+1,1);
+            ans[ta.sum(p[i].mem+1)]++;
+        }
+        for(int i=1;i<=n;i++){
+            printf("%d\n",ans[i]);
+        }
+    }
+};
+int main(){
+    Deal().solve();
+}
+```
